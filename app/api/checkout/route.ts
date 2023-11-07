@@ -143,6 +143,7 @@ export async function POST(req: Request, { params }: IProps) {
 
     const paystackParams = {
       email,
+      ref: orderNumber,
       amount: (totalPrice + 10) * 100,
       currency: "GHS",
       callback_url: `${origin}/cart-summary?success=1`,
