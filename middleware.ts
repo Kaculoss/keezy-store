@@ -11,6 +11,7 @@ export default authMiddleware({
     "/categories/:path*",
     "/contact-us/:path*",
     "/products/:path*",
+    "/studio/:path*",
     "/api/:path*",
   ],
 })
