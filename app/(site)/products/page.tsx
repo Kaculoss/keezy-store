@@ -19,6 +19,8 @@ interface Props {
   }
 }
 
+export const revalidate = 0
+
 export default async function ProductsPage({ searchParams }: Props) {
   const {
     date = "desc",

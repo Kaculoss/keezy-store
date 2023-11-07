@@ -11,6 +11,8 @@ import Marquee from "@/components/Marquee"
 import NewProducts from "@/components/NewProducts"
 import TrendingProducts from "@/components/TrendingProducts"
 
+export const revalidate = 0
+
 export default async function Home() {
   const [featuredProducts, trendingProducts, newProducts, brands] =
     await Promise.all([

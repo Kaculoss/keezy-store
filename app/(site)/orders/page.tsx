@@ -5,6 +5,9 @@ import { getOrders } from "@/lib/getFunctions"
 
 import OrderClient from "./components/client"
 import { OrderColumn } from "./components/columns"
+
+export const revalidate = 0
+
 const OrdersPage = async () => {
   const { userId } = auth()
 

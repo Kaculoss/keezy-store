@@ -91,7 +91,7 @@ const Banner = ({ type, product }: Iprops) => {
           />
           {product.old_price && product.old_price > product.price && (
             <div className="absolute right-0 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-orange-950 text-xs font-semibold text-slate-50 lg:h-14 lg:w-14 lg:text-base">
-              <p>-{getPercentDiff(product.price, product.old_price)}</p>
+              <p>-{getPercentDiff(product.price, product.old_price)}%</p>
             </div>
           )}
         </div>
@@ -159,7 +159,7 @@ const Banner = ({ type, product }: Iprops) => {
           />
           {product.old_price && product.old_price > product.price && (
             <div className="absolute left-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-red-800 text-xs font-semibold text-slate-50 lg:h-14 lg:w-14 lg:text-base">
-              <p>-{getPercentDiff(product.price, product.old_price)}</p>
+              <p>-{getPercentDiff(product.price, product.old_price)}%</p>
             </div>
           )}
         </div>
@@ -210,7 +210,7 @@ const Banner = ({ type, product }: Iprops) => {
           />
           {product.old_price && product.old_price > product.price && (
             <div className="absolute right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-lime-950 text-xs font-semibold text-slate-50 lg:h-14 lg:w-14 lg:text-base">
-              <p>-{getPercentDiff(product.price, product.old_price)}</p>
+              <p>-{getPercentDiff(product.price, product.old_price)}%</p>
             </div>
           )}
         </div>
@@ -254,7 +254,7 @@ const Banner = ({ type, product }: Iprops) => {
           />
           {product.old_price && product.old_price > product.price && (
             <div className="absolute right-0 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-emerald-800 text-xs font-semibold text-slate-50 lg:h-14 lg:w-14 lg:text-base">
-              <p>-{getPercentDiff(product.price, product.old_price)}</p>
+              <p>-{getPercentDiff(product.price, product.old_price)}%</p>
             </div>
           )}
         </div>
@@ -289,7 +289,7 @@ const Banner = ({ type, product }: Iprops) => {
           />
           {product.old_price && product.old_price > product.price && (
             <div className="absolute left-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-sky-950 text-xs font-semibold text-slate-50 lg:h-14 lg:w-14 lg:text-base">
-              <p>-{getPercentDiff(product.price, product.old_price)}</p>
+              <p>-{getPercentDiff(product.price, product.old_price)}%</p>
             </div>
           )}
         </div>

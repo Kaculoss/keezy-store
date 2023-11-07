@@ -42,6 +42,8 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.ico" },
 }
 
+export const revalidate = 0
+
 export default async function RootLayout({
   children,
 }: {

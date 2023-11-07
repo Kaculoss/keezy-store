@@ -10,6 +10,8 @@ type Props = {
   params: { category: string }
 }
 
+export const revalidate = 0
+
 export default async function CategoryPage({ params }: Props) {
   const slug = params.category
   const [categoryProducts, brands] = await Promise.all([

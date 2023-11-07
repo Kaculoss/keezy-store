@@ -10,6 +10,8 @@ interface IProps {
   params: { product: string }
 }
 
+export const revalidate = 0
+
 export default async function ProductPage({ params }: IProps) {
   const slug = params.product
   const product = await getSingleProduct(slug)

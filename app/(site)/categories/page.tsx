@@ -6,6 +6,8 @@ import { getBrands, getCategories } from "@/lib/getFunctions"
 import { shimmer, toBase64 } from "@/lib/image"
 import Marquee from "@/components/Marquee"
 
+export const revalidate = 0
+
 export default async function CategoriesPage() {
   const [categories, brands] = await Promise.all([getCategories(), getBrands()])
 
