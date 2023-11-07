@@ -1,4 +1,4 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const { fontFamily } = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -72,6 +72,22 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "scroll-left": {
+          from: {
+            transform: "translateX(80%)",
+          },
+          to: {
+            transform: "translateX(calc(-100% - 1.5rem))",
+          },
+        },
+        "scroll-left-1": {
+          from: {
+            transform: "translateX(20%)",
+          },
+          to: {
+            transform: "translateX(calc(-100% - 1.5rem))",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -85,4 +101,4 @@ module.exports = {
     require("tailwindcss-animate"),
     require("@tailwindcss/forms")({ strategy: "class" }),
   ],
-};
+}
