@@ -38,7 +38,7 @@ export default defineType({
       title: "Customner Number",
       type: "string",
       readOnly: true,
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) => Rule.required() ,
     }),
     defineField({
       name: "order_items",
@@ -84,6 +84,21 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "payment",
+      title: "Payment",
+      type: "string",
+      options: {
+        layout: "radio",
+        direction: "vertical",
+        list: [
+          { title: "Paid", value: "paid" },
+          { title: "Not Paid", value: "not_paid" },
+        ],
+      },
+      validation: (Rule) => Rule.required(),
+      readOnly: true,
+    }),
+    defineField({
       name: "order_status",
       title: "Order Status",
       type: "string",
@@ -98,6 +113,7 @@ export default defineType({
           { title: "Canceled", value: "canceled" },
         ],
       },
+      readOnly: ({document}) =>  document?.order_status === "awaiting",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -106,21 +122,6 @@ export default defineType({
       type: "boolean",
       readOnly: true,
       initialValue: false,
-    }),
-    defineField({
-      name: "payment",
-      title: "Payment",
-      type: "string",
-      options: {
-        layout: "radio",
-        direction: "vertical",
-        list: [
-          { title: "Paid", value: "paid" },
-          { title: "Not Paid", value: "not_paid" },
-        ],
-      },
-      validation: (Rule) => Rule.required(),
-      readOnly: true,
     }),
   ],
   preview: {
