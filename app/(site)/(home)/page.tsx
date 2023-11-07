@@ -22,7 +22,6 @@ export default async function Home() {
 
   return (
     <>
-      Home Page
       <CarouselSlider trendingProducts={trendingProducts} />
       <div className="mt-6">
         <FeaturedProducts featuredProducts={featuredProducts} />
