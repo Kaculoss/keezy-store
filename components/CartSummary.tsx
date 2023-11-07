@@ -78,7 +78,7 @@ const CartSummary = ({ userEmail }: CartSummaryProps) => {
     if (searchParams.get("success")) {
       toast({ description: "Payment completed." })
       removeAll()
-      redirect("/products")
+      redirect("/orders")
     }
 
     if (searchParams.get("cancelled")) {
