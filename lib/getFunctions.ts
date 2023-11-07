@@ -216,7 +216,7 @@ export const getSingleProduct = async (slug: string): Promise<Product> => {
 
 export const getOrders = async (email: string): Promise<Order[]> => {
   return client.fetch(
-    groq`*[_type == "order" && email == email] | order(_createdAt desc){
+    groq`*[_type == "order" && email == $email] | order(_createdAt desc){
       order_number,
       email,
       name,
